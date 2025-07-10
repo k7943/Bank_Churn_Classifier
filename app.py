@@ -6,16 +6,16 @@ import pandas as pd
 import pickle
 
 # Load the trained model
-model = tf.keras.models.load_model('model.h5')
+model = tf.keras.models.load_model('artifacts/model.h5')
 
 # Load the encoders and scaler
-with open('label_encoder_gender.pkl', 'rb') as file:
+with open('artifacts/label_encoder_gender.pkl', 'rb') as file:
     label_encoder_gender = pickle.load(file)
 
-with open('one_hot_encoder_geo.pkl', 'rb') as file:
+with open('artifacts/one_hot_encoder_geo.pkl', 'rb') as file:
     one_hot_encoder_geo = pickle.load(file)
 
-with open('scaler.pkl', 'rb') as file:
+with open('artifacts/scaler.pkl', 'rb') as file:
     scaler = pickle.load(file)
 
 # Page config
